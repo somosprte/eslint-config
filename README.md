@@ -4,8 +4,6 @@ A eslint config settings for [PRTE - Tecnologia & Soluções](https://prte.com.b
 
 ## Installation
 
-Yarn:
-
 ```sh
 yarn add @somosprte/eslint-config -D
 ```
