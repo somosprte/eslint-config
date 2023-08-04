@@ -25,6 +25,28 @@ jobs:
       - name: Install dependencies in production mode
         run: yarn install --production
 
+      - name: Change package version
+        run: yarn version --new-version ${{ github.event.release.tag_name }}
+      
+      - name: Configure git user email
+        run: git config --global user.email "${{ github.event.release.author.email }}"
+
+      - name: Configure git user name
+        run: git config --global user.name "${{ github.event.release.author.login }}"
+
+      - name: Stage package.json
+        run: git add package.json
+
+      - name: Commit package.json
+        run: |
+          git commit -m "chore: release ${{ github.event.release.tag_name }}"
+
+      - name: Push changes to Github
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: master
+
       - name: Publish package to Github Packages
         run: yarn publish
         env:
