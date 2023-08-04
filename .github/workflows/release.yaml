@@ -43,6 +43,9 @@ jobs:
       - name: Configure git user name
         run: git config --global user.name "${{ github.event.release.author.login }}"
 
+      - name: Fetch git branches
+        run: git fetch --all
+
       - name: Change package version
         run: yarn version --new-version ${{ github.event.release.tag_name }}
 
