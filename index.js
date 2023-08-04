@@ -80,7 +80,7 @@ module.exports = {
   },
   settings: {
     'import/parsers': {
-      [require.resolve('@typescript-eslint/parser')]: ['.ts', '.d.ts'],
+      [require.resolve('@typescript-eslint/parser')]: ['.ts', '.tsx', '.d.ts'],
     },
   },
   overrides: [
