@@ -53,14 +53,10 @@ jobs:
         run: git add package.json
 
       - name: Commit package.json
-        run: |
-          git commit -m "chore: release ${{ github.event.release.tag_name }}"
+        run: 'git commit -m "chore: release ${{ github.event.release.tag_name }}"'
 
       - name: Push changes to Github
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: master
+        run: git push origin master
 
       - name: Publish package to Github Packages
         run: yarn publish
