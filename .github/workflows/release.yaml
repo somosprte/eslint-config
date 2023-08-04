@@ -25,6 +25,18 @@ jobs:
       - name: Install dependencies in production mode
         run: yarn install --production
 
+      - name: Create SSH directory
+        run: mkdir -p ~/.ssh/
+
+      - name: Add Github to known hosts
+        run: ssh-keyscan github.com >> ~/.ssh/known_hosts
+
+      - name: Put Private Key on SSH directory
+        run: echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_rsa
+
+      - name: Change permissions to private key
+        run: chmod 600 ~/.ssh/id_rsa
+
       - name: Configure git user email
         run: git config --global user.email "${{ github.event.release.author.email }}"
 
