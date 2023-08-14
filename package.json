@@ -1,6 +1,6 @@
 {
   "name": "@somosprte/eslint-config",
-  "version": "1.0.0",
+  "version": "1.1.10",
   "description": "ESLint configuration used by PRTE - Tecnologia & Soluções.",
   "license": "MIT",
   "type": "commonjs",
