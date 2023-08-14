@@ -25,6 +25,15 @@ jobs:
       - name: Install dependencies in production mode
         run: yarn install --production
 
+      - name: List all available branches
+        run: git branch -a
+
+      - name: List all files in current directory
+        run: ls -la
+
+      - name: Pull repository from Github
+        run: git pull origin master
+
       - name: Create SSH directory
         run: mkdir -p ~/.ssh/
 
