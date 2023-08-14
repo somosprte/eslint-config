@@ -59,7 +59,9 @@ jobs:
         run: 'git commit -m "chore: release ${{ github.event.release.tag_name }}"'
 
       - name: Push changes to Github
-        run: git push origin master
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish package to Github Packages
         run: yarn publish
