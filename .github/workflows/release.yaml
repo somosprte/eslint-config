@@ -25,44 +25,8 @@ jobs:
       - name: Install dependencies in production mode
         run: yarn install --production
 
-      - name: Create SSH directory
-        run: mkdir -p ~/.ssh/
-
-      - name: Add Github to known hosts
-        run: ssh-keyscan github.com >> ~/.ssh/known_hosts
-
-      - name: Put Private Key on SSH directory
-        run: echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_rsa
-
-      - name: Change permissions to private key
-        run: chmod 600 ~/.ssh/id_rsa
-
-      - name: Configure git user email
-        run: git config --global user.email "${{ github.event.release.author.email }}"
-
-      - name: Configure git user name
-        run: git config --global user.name "${{ github.event.release.author.login }}"
-
-      - name: Fetch git branches
-        run: git fetch --all
-
-      - name: Checkout to principal branch
-        run: git checkout ${{ github.event.repository.default_branch }}
-
       - name: Change package version
         run: yarn version --new-version ${{ github.event.release.tag_name }}
-
-      - name: Unstage package.json
-        run: git reset HEAD~1
-
-      - name: Stage package.json
-        run: git add package.json
-
-      - name: Commit package.json
-        run: 'git commit -m "chore: release ${{ github.event.release.tag_name }}"'
-
-      - name: Push changes to Github
-        run: git push origin master -f
 
       - name: Publish package to Github Packages
         run: yarn publish
