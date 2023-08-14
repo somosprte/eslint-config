@@ -62,7 +62,7 @@ jobs:
         run: 'git commit -m "chore: release ${{ github.event.release.tag_name }}"'
 
       - name: Push changes to Github
-        run: git push origin master
+        run: git push origin master -f
 
       - name: Publish package to Github Packages
         run: yarn publish
