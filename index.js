@@ -17,11 +17,62 @@ module.exports = {
     'no-trailing-spaces': ['error', { 'ignoreComments': true }],
     'indent': ['error', 2],
     'semi': ['error', 'always'],
+    'padding-line-between-statements': [
+      'error',
+      {
+        'blankLine': 'always',
+        'prev': 'const',
+        'next': 'return'
+      },
+      {
+        'blankLine': 'always',
+        'prev': 'const',
+        'next': 'if'
+      },
+      {
+        'blankLine': 'always',
+        'prev': 'let',
+        'next': 'return'
+      },
+      {
+        'blankLine': 'always',
+        'prev': 'let',
+        'next': 'if'
+      },
+      {
+        'blankLine': 'always',
+        'prev': 'var',
+        'next': 'return'
+      },
+      {
+        'blankLine': 'always',
+        'prev': 'var',
+        'next': 'if'
+      },
+      {
+        'blankLine': 'always',
+        'prev': 'if',
+        'next': '*'
+      },
+    ],
+    'space-before-function-paren': [
+      'error',
+      {
+        'anonymous': 'never',
+        'named': 'always',
+        'asyncArrow': 'always'
+      }
+    ],
+    'space-before-blocks': 'error',
     'import-newlines/enforce': [
       'error',
       2,
       140
     ],
+    'arrow-spacing': 'error',
+    'keyword-spacing': 'error',
+    'switch-colon-spacing': 'error',
+    'no-multi-spaces': 'error',
     'no-multiple-empty-lines': [
       'error',
       {
