@@ -7,7 +7,7 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint', 'eslint-plugin-import-newlines'],
   rules: {
-    'space-in-brakcets': [
+    'space-in-brackets': [
       'error',
       'always',
       {
