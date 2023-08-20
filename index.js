@@ -7,6 +7,18 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint', 'eslint-plugin-import-newlines'],
   rules: {
+    'space-in-brakcets': [
+      'error',
+      'always',
+      {
+        'singleValue': true,
+        'propertyName': true,
+        'arraysInArrays': true,
+        'objectsInObjects': true,
+        'arraysInObjects': false,
+        'objectsInArrays': false
+      }
+    ],
     'camelcase': 'error',
     'no-extra-semi': 'error',
     'comma-dangle': 'error',
