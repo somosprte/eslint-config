@@ -54,6 +54,11 @@ module.exports = {
         'prev': 'if',
         'next': '*'
       },
+      {
+        'blankLine': 'always',
+        'prev': 'export',
+        'next': '*'
+      }
     ],
     'space-before-function-paren': [
       'error',
