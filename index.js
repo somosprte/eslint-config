@@ -72,7 +72,7 @@ module.exports = {
     'import-newlines/enforce': [
       'error',
       2,
-      140
+      180
     ],
     'arrow-spacing': 'error',
     'keyword-spacing': 'error',
