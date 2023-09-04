@@ -28,5 +28,5 @@ Or if you prefer using `.eslintrc.js` consider using this:
 ```javascript
 module.exports = {
   extends: "@somosprte/eslint-config"
-}
+};
 ```

@@ -5,7 +5,7 @@ module.exports = {
   },
   extends: ['plugin:@typescript-eslint/recommended'],
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'eslint-plugin-import-newlines'],
+  plugins: ['@typescript-eslint', 'eslint-plugin-import-newlines', 'react'],
   rules: {
     'camelcase': 'error',
     'no-extra-semi': 'error',
@@ -132,11 +132,63 @@ module.exports = {
         'argsIgnorePattern': '^_',
         'caughtErrors': 'all'
       }
-    ]
+    ],
+    'react/jsx-boolean-value': ['error', 'always'],
+    'react/jsx-closing-bracket-location': [
+      'warn',
+      {
+        nonEmpty: 'after-props',
+        selfClosing: 'tag-aligned',
+      },
+    ],
+    'react/jsx-curly-brace-presence': ['warn', 'never'],
+    'react/jsx-curly-spacing': [
+      'warn',
+      {
+        when: 'never',
+      },
+    ],
+    'react/jsx-equals-spacing': ['warn', 'never'],
+    'react/jsx-first-prop-new-line': ['warn', 'multiline'],
+    'react/jsx-fragments': ['warn', 'syntax'],
+    'react/jsx-indent': ['warn', 2],
+    'react/jsx-indent-props': ['warn', 2],
+    'react/jsx-no-bind': [
+      'warn',
+      {
+        allowArrowFunctions: true,
+        allowFunctions: true,
+      },
+    ],
+    'react/jsx-no-duplicate-props': 'error',
+    'react/jsx-no-undef': 'error',
+    'react/jsx-props-no-multi-spaces': 'warn',
+    'react/jsx-tag-spacing': 'warn',
+    'react/jsx-uses-react': 'warn',
+    'react/jsx-uses-vars': 'warn',
+    'react/jsx-wrap-multilines': [
+      'warn',
+      {
+        declaration: false,
+        assignment: false,
+        return: true,
+        arrow: true,
+      },
+    ],
+    'react/no-access-state-in-setstate': 'error',
+    'react/no-did-mount-set-state': 'warn',
+    'react/no-did-update-set-state': 'warn',
+    'react/no-direct-mutation-state': 'warn',
+    'react/no-redundant-should-component-update': 'warn',
+    'react/no-this-in-sfc': 'warn',
+    'react/no-unknown-property': 'warn',
+    'react/no-will-update-set-state': 'warn',
+    'react/require-render-return': 'error',
+    'react/self-closing-comp': 'warn'
   },
   settings: {
     'import/parsers': {
-      [require.resolve('@typescript-eslint/parser')]: ['.ts', '.tsx', '.d.ts'],
+      '@typescript-eslint/parser': ['.ts', '.tsx', '.d.ts'],
     },
   },
   overrides: [
