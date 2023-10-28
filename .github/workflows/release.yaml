@@ -25,6 +25,12 @@ jobs:
       - name: Install dependencies in production mode
         run: yarn install --production
 
+      - name: Configure git user email
+        run: git config --global user.email "${{ github.event.release.author.email }}"
+
+      - name: Configure git user name
+        run: git config --global user.name "${{ github.event.release.author.login }}"
+
       - name: Change package version
         run: yarn version --new-version ${{ github.event.release.tag_name }}
 
