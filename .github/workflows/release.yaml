@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: 20.5
+          node-version: 20.9
           registry-url: https://npm.pkg.github.com/
 
       - name: Install yarn globally
@@ -24,12 +24,6 @@ jobs:
 
       - name: Install dependencies in production mode
         run: yarn install --production
-
-      - name: Configure git user email
-        run: git config --global user.email "${{ github.event.release.author.email }}"
-
-      - name: Configure git user name
-        run: git config --global user.name "${{ github.event.release.author.login }}"
 
       - name: Change package version
         run: yarn version --new-version ${{ github.event.release.tag_name }}

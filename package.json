@@ -15,7 +15,7 @@
     "url": "git+https://github.com/somosprte/eslint-config.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com",
+    "registry": "https://registry.npmjs.org",
     "access": "public",
     "tag": "latest"
   },
