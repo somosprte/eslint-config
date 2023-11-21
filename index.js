@@ -15,7 +15,9 @@ module.exports = {
     'no-duplicate-imports': 'error',
     'no-case-declarations': 'error',
     'no-trailing-spaces': ['error', { 'ignoreComments': true }],
-    'indent': ['error', 2],
+    'indent': ['error', 2, {
+      'SwitchCase': 1
+    }],
     'semi': ['error', 'always'],
     'padding-line-between-statements': [
       'error',
