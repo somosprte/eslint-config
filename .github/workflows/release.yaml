@@ -17,7 +17,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 20.9
-          registry-url: https://npm.pkg.github.com/
+          registry-url: https://registry.npmjs.org
 
       - name: Install yarn globally
         run: npm install -g yarn
