@@ -48,12 +48,6 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       #
-      # Build package and generate javascript files
-      #
-      - name: Build package
-        run: pnpm build
-
-      #
       # Configure git user email
       #
       - if: github.event_name == 'release'
