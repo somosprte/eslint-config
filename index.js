@@ -5,7 +5,7 @@ module.exports = {
   },
   extends: ['plugin:@typescript-eslint/recommended'],
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'eslint-plugin-import-newlines', 'react'],
+  plugins: ['@typescript-eslint', 'eslint-plugin-import-newlines', 'react', 'unused-imports'],
   rules: {
     'camelcase': 'error',
     'no-extra-semi': 'error',
