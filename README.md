@@ -5,7 +5,7 @@ A eslint config settings for [PRTE - Tecnologia & Soluções](https://prte.com.b
 ## Installation
 
 ```sh
-yarn add @somosprte/eslint-config -D
+yarn add @prte/eslint-config -D
 ```
 
 ## Quick start

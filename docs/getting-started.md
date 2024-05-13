@@ -10,7 +10,7 @@ Update your `package.json` adding this following code:
 ```json
 {
   "eslintConfig": {
-    "extends": "@somosprte/eslint-config"
+    "extends": "@prte/eslint-config"
   }
 }
 ```
@@ -19,7 +19,7 @@ Or if you prefer using `.eslintrc.json` consider using this:
 
 ```json
 {
-  "extends": "@somosprte/eslint-config"
+  "extends": "@prte/eslint-config"
 }
 ```
 
@@ -27,6 +27,6 @@ Or if you prefer using `.eslintrc.js` consider using this:
 
 ```javascript
 module.exports = {
-  extends: "@somosprte/eslint-config"
+  extends: "@prte/eslint-config"
 };
 ```
