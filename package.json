@@ -1,13 +1,13 @@
 {
-  "name": "@somosprte/eslint-config",
+  "name": "@prte/eslint-config",
   "version": "1.8.0",
   "description": "ESLint configuration used by PRTE - Tecnologia & Soluções.",
   "license": "MIT",
   "type": "commonjs",
   "private": false,
   "author": {
-    "name": "Vinícius Gutierrez da Silva Rocha",
-    "email": "viniciusgutierrez@prte.com.br",
+    "name": "PRTE - Tecnologia & Soluções",
+    "email": "contato@prte.com.br",
     "url": "https://prte.com.br"
   },
   "repository": {
